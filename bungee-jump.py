@@ -3,7 +3,7 @@ from vpython import *
 
 # --- Scene Setup ---
 scene.title = " Bungee Jump simulation"
-scene.background = color.red
+scene.background = color.white 
 scene.width = 800
 scene.height = 600
 
@@ -11,7 +11,9 @@ scene.height = 600
 # Ground at y=0
 ground = box(pos=vector(0, -0.5, 0), size=vector(60, 1, 60), color=color.green)
 
-
+# Building (30 units high)
+building = box(pos=vector(-10, 15, 0), size=vector(4, 30, 4), color=color.gray(0.5))
+top_edge = vector(-8, 30, 0) # The anchor point for the cord
 
 # Jumper (Added make_trail to see the fall path)
 head = sphere(pos=vector(0,0,0), radius=0.4, color=color.yellow)
@@ -63,7 +65,8 @@ while True:
             max_stretch = stretch
       
         
-       # Air resistance (Damping)
+       
+    # Air resistance (Damping)
     Fdrag = -b * v
     
     # Net Force
