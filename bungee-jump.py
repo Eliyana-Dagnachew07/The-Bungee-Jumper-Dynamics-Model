@@ -38,7 +38,7 @@ L0 = 10       # Shorter natural length gives more "braking distance"
 b = 1.8       # Higher damping to simulate cord internal friction and air resistance
 
 # Initial conditions
-v = vector(3, 2, 0)  # Initial outward jump velocity
+v = vector(4, 2, 0)  # Initial outward jump velocity
 dt = 0.01
 # --- INITIALIZE THE TRACKERS HERE ---
 max_stretch = 0
