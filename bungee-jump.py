@@ -31,9 +31,9 @@ jumper.pos = top_edge + vector(1, 0, 0)
 cord = cylinder(pos=top_edge, axis=jumper.pos - top_edge, radius=0.1, color=color.orange)
 
 # --- Physics Constants ---
-g = vector(0, -9.8, 0)
-m = 70
-k = 120     # High stiffness to ensure a quick stop
+g = vector(1, -9.8, 0)
+m = 80
+k = 140     # High stiffness to ensure a quick stop
 L0 = 10       # Shorter natural length gives more "braking distance"
 b = 1.8       # Higher damping to simulate cord internal friction and air resistance
 
