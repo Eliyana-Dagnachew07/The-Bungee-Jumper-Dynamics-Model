@@ -85,6 +85,10 @@ def reset_jump():
     fixed_info.text = ""
     live_info.text = "Ready to jump..."
     active = True # Auto-start on reset
+    scene.append_to_caption("\n") # Add space below the 3D window
+
+button(text="Pause", bind=control_physics, color=color.orange)
+button(text="Restart", bind=reset_jump, color=color.cyan)
 # ----------------------------- 6. MAIN LOOP -----------------------------
 while True:
     rate(100)
@@ -125,9 +129,9 @@ while True:
     if distance < L0:
         phase = " Phase 1 Free fall"
     elif v.y < 0:
-        phase = " Phase 2 Cord streching"
+        phase = " Phase 2 Elastic streching"
     else:
-        phase = " Phase 3 Rebound and oscillation"
+        phase = "Phase 3 Rebounding and oscillation"
     
     phase_info.text = phase
 
@@ -151,8 +155,10 @@ while True:
     )
     record_info.text = "MAX G: " + round(max_g_force, 2) + "\nMAX STRETCH: " + round(max_stretch, 1) + "m"
 
-    # Equilibrium stop check
+
+       # Equilibrium stop check
     equilibrium_dist = L0 + (mag(Fg)/k)
     if mag(v) < 0.05 and abs(distance - equilibrium_dist) < 0.1:
         v = vector(0,0,0)
         fixed_info.text = "Stable. Max G experienced: " + str(round(max_g_force, 2))
+        break
