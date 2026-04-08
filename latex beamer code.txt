@@ -199,24 +199,18 @@ while jumper.pos.y > stop_height:
     \end{columns}
 \end{frame}
 % Slide 11: Final Thank You
-\begin{frame}
-    \centering
-    \vspace{1cm}
+
+\vspace*{\fill} % Pushes the text to the center of the page vertically
+\begin{center}
     {\huge \textbf{\textcolor{brown!80!black}{THANK YOU!}}}
     
     \vspace{0.8cm}
     {\large \textbf{Questions \& Discussion}}
     
-    \vspace{1.2cm}
-    \begin{tcolorbox}[colback=brown!5, colframe=brown!80!black, width=0.7\textwidth, center]
-        \centering
-        \textbf{Group 1 \& 7} \\
-        \small St. John Baptist De La Salle Catholic School \\
-        \textit{Physics Simulation: Bungee Jump Dynamics}
-    \end{tcolorbox}
-    
-    \vspace{0.6cm}
-    \scriptsize \textit{Programmed in VPython | Typeset in \LaTeX}
-\end{frame}
+    \vspace{1cm}
+    \rule{0.4\textwidth}{0.4pt} % Adds a decorative horizontal line
+\end{center}
+\vspace*{\fill}
+ 
 
 \end{document}
